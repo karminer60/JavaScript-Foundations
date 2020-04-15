@@ -4,7 +4,9 @@
 /* Create variables for principal, interest rate, and years. Assign them the values 200000, 0.05, and 30 respectively. Create another value called name and give it the value of your own name.
 */
 
-
+const principal = 200000;
+const interest = 0.05;
+const years = 30; 
 
 
 
@@ -16,6 +18,8 @@ Create a variable called `monthlyInterestRate` and give it the value of interest
 Create another variable called `periods` and give it the value of years*12.
 */
 
+const monthlyInterestRate = interest/12
+const periods = years*12
 
 
 
