@@ -42,7 +42,7 @@ function monthlyRateCalculator(a, b) {
 }
 
 
-console.log(monthlyRateCalculator(numerator, denominator));
+console.log("Karina, your monthly rate is " + monthlyRateCalculator(numerator, denominator));
 
 
 // 🏡 Task 3: Function
@@ -51,6 +51,7 @@ console.log(monthlyRateCalculator(numerator, denominator));
 If your name is `Oscar` mortgageCalculator() should return "Oscar, your monthly rate is 1073.64"
 */
 
+//Did this above under task 2
 
 
 
