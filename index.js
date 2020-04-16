@@ -131,13 +131,10 @@ function variableInterestRate(P, I, N,S) {
         let denominator = (Math.pow( (1 + I/12), N*12 )) - 1;
         let monthlyRate = numerator / denominator;
         console.log("Karina, with an interest rate of " + I  + " your monthly rate is " + monthlyRate);
-        I += 0.05;
+        I += 0.005;
     }
-    
-    
-      
+          
 }
-
 
 variableInterestRate(200000, 0.05, 30, 640);
 
