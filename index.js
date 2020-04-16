@@ -18,8 +18,8 @@ Create a variable called `monthlyInterestRate` and give it the value of interest
 Create another variable called `periods` and give it the value of years*12.
 */
 
-let monthlyInterestRate = interest/12;
-let periods = years*12;
+//let monthlyInterestRate = interest/12;
+//let periods = years*12;
 
 
 
@@ -33,16 +33,16 @@ Hint #2: you'll need to use the `math` object for parts of this calculation!
 When your math is correct, monthlyRate will equal 1073.64
 */
 
-let numerator = principal * monthlyInterestRate * Math.pow( (1 + monthlyInterestRate), periods);
-let denominator = (Math.pow( (1 + monthlyInterestRate), periods )) - 1;
+//let numerator = principal * monthlyInterestRate * Math.pow( (1 + monthlyInterestRate), periods);
+//let denominator = (Math.pow( (1 + monthlyInterestRate), periods )) - 1;
 
-function monthlyRateCalculator(a, b) { 
-    let monthlyRate = a / b;
-    return monthlyRate;   
-}
+//function monthlyRateCalculator(a, b) { 
+    //let monthlyRate = a / b;
+    //return monthlyRate;   
+//}
 
 
-console.log("Karina, your monthly rate is " + monthlyRateCalculator(numerator, denominator));
+//console.log("Karina, your monthly rate is " + monthlyRateCalculator(numerator, denominator));
 
 
 // 🏡 Task 3: Function
@@ -51,7 +51,7 @@ console.log("Karina, your monthly rate is " + monthlyRateCalculator(numerator, d
 If your name is `Oscar` mortgageCalculator() should return "Oscar, your monthly rate is 1073.64"
 */
 
-//Did this above under task 2
+//Did this above, under task 2
 
 
 
@@ -63,6 +63,17 @@ For example,
 mortgageCalculator(2000000, 0.05, 30); <-- should return 1,073.64
 */
 
+
+
+function monthlyRateCalculator(P, I, N) { 
+    let numerator = P * I/12 * Math.pow( (1 + I/12), N*12);
+    let denominator = (Math.pow( (1 + I/12), N*12 )) - 1;
+    let monthlyRate = numerator / denominator;
+    return monthlyRate;   
+}
+
+
+console.log("Karina, your monthly rate is " + monthlyRateCalculator(200000, 0.05, 30));
 
 
 
