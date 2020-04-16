@@ -124,15 +124,6 @@ For example, variableInterestRate(200000, 0.04, 30) should console.log:
 function variableInterestRate(P, I, N,S) { 
     I -= 0.02
     let i;
-    if( S>740){
-        I -= 0.05;
-    }
-    else if(S<660){
-        I +=0.05;
-    }
-    else{
-        I +=0; 
-    }
 
     for(i=0; i<=10; i++){
         
