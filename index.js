@@ -18,8 +18,8 @@ Create a variable called `monthlyInterestRate` and give it the value of interest
 Create another variable called `periods` and give it the value of years*12.
 */
 
-let monthlyInterestRate = interest/12
-let periods = years*12
+let monthlyInterestRate = interest/12;
+let periods = years*12;
 
 
 
@@ -32,7 +32,17 @@ Hint #2: you'll need to use the `math` object for parts of this calculation!
 
 When your math is correct, monthlyRate will equal 1073.64
 */
-let monthlyRate =  principal [ interest ( 1 + interest )^periods ] / [ ( 1 + interest )^periods – 1 ]
+
+let numerator = principal * monthlyInterestRate * Math.pow( (1 + monthlyInterestRate), periods);
+let denominator = (Math.pow( (1 + monthlyInterestRate), periods )) - 1;
+
+function monthlyRateCalculator(a, b) { 
+    let monthlyRate = a / b;
+    return monthlyRate;   
+}
+
+
+console.log(monthlyRateCalculator(numerator, denominator));
 
 
 // 🏡 Task 3: Function
