@@ -84,24 +84,24 @@ mortgageCalculator(2000000, 0.05, 30); <-- should return 1,073.64
 
 Then, add control flow within your function such that IF creditScore is above 740, interest rate drops by 0.5%, if credit score is below 660, interest rate increases by 0.5% and if credit score is anywhere between 660 and 740 interest rate doesn't change.
 */
-function monthlyRateCalculator(P, I, N,S) { 
-    if( S>740){
-        I -= 0.5;
-    }
-    else if(S<660){
-        I +=0.5;
-    }
-    else{
-       I +=0; 
-    }
-    let numerator = P * I/12 * Math.pow( (1 + I/12), N*12);
-    let denominator = (Math.pow( (1 + I/12), N*12 )) - 1;
-    let monthlyRate = numerator / denominator;
-    return monthlyRate;   
-}
+//function monthlyRateCalculator(P, I, N,S) { 
+    //if( S>740){
+        //I -= 0.5;
+    //}
+    //else if(S<660){
+        //I +=0.5;
+    //}
+    //else{
+       //I +=0; 
+    //}
+    //let numerator = P * I/12 * Math.pow( (1 + I/12), N*12);
+    //let denominator = (Math.pow( (1 + I/12), N*12 )) - 1;
+    //let monthlyRate = numerator / denominator;
+    //return monthlyRate;   
+//}
 
 
-console.log("Karina, your monthly rate is " + monthlyRateCalculator(200000, 0.05, 30, 640));
+//console.log("Karina, your monthly rate is " + monthlyRateCalculator(200000, 0.05, 30, 640));
 
 
 
@@ -121,7 +121,34 @@ For example, variableInterestRate(200000, 0.04, 30) should console.log:
 "{Name}, with an interest rate of 0.06, your monthly rate is $1199"
 */
 
+function variableInterestRate(P, I, N,S) { 
+    I -= 0.02
+    let i;
+    if( S>740){
+        I -= 0.05;
+    }
+    else if(S<660){
+        I +=0.05;
+    }
+    else{
+        I +=0; 
+    }
 
+    for(i=0; i<=10; i++){
+        
+        let numerator = P * I/12 * Math.pow( (1 + I/12), N*12);
+        let denominator = (Math.pow( (1 + I/12), N*12 )) - 1;
+        let monthlyRate = numerator / denominator;
+        console.log("Karina, with an interest rate of " + I  + " your monthly rate is " + monthlyRate);
+        I += 0.05;
+    }
+    
+    
+      
+}
+
+
+variableInterestRate(200000, 0.05, 30, 640);
 
 
 // 🌟🌟🌟 STRETCH 🌟🌟🌟//
